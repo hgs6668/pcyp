@@ -16,7 +16,7 @@
             text-align: center;
             display: flex;
             align-items: center;
-            justify-content: center; /* 水平居中 */
+            justify-content: center;
         }
         #boss-avatar {
             width: 50px;
@@ -37,8 +37,26 @@
             text-align: center;
         }
         a {
-            text-decoration: none; /* 去掉下划线 */
+            text-decoration: none;
             color: blue;
+        }
+        .book-now-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #f00;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-button:hover {
+            background-color: #c00;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -65,7 +83,7 @@
 
         <section>
             <h2>旗下艺人</h2>
-            <p><a href="artists.html">现在就约</a></p>
+            <a href="artists.html" class="book-now-button">现在就约</a>
         </section>
     </main>
 
