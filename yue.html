@@ -4,24 +4,20 @@
 <title>Bilibili Video Fullscreen</title>
 <style>
 #video-container {
-  width: 100%; /* 初始宽度 */
-  height: auto; /* 初始高度，根据视频比例自动调整 */
-}
-
-#bilibili-iframe {
   width: 100%;
-  height: 100%;
-}
-
-/* 全屏样式 */
-#video-container.fullscreen {
-  position: fixed;
+  height: auto; /* 初始高度，根据视频比例自动调整 */
+  position: fixed; /* 网页加载即全屏 */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 9999; /* 确保在其他元素之上 */
   background: #000; /* 可选：设置黑色背景 */
+}
+
+#bilibili-iframe {
+  width: 100%;
+  height: 100%;
 }
 </style>
 </head>
@@ -31,21 +27,10 @@
   <iframe id="bilibili-iframe" src="//player.bilibili.com/player.html?isOutside=true&aid=546403908&bvid=BV1hq4y1s7VH&cid=361820022&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </div>
 
-<button id="fullscreen-button">网页全屏</button>
 
 <script>
-const videoContainer = document.getElementById('video-container');
-const fullscreenButton = document.getElementById('fullscreen-button');
-
-fullscreenButton.addEventListener('click', () => {
-  if (videoContainer.classList.contains('fullscreen')) {
-    videoContainer.classList.remove('fullscreen');
-    fullscreenButton.textContent = '网页全屏';
-  } else {
-    videoContainer.classList.add('fullscreen');
-    fullscreenButton.textContent = '退出全屏';
-  }
-});
+//  现在不需要 JavaScript 来控制全屏，CSS 直接控制
+//  如果需要退出全屏的功能，可以添加一个按钮和JavaScript代码来动态修改CSS
 </script>
 
 </body>
